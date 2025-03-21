@@ -54,6 +54,16 @@
             color: #f1c40f;
             font-size: 3rem;
         }
+        .bouquet {
+            position: relative;
+            margin-top: 50px;
+            text-align: center;
+            z-index: 2;
+        }
+        .bouquet img {
+            width: 150px;
+            animation: sway 3s ease-in-out infinite;
+        }
         @keyframes animate {
             0% {
                 transform: translateY(-10%);
@@ -70,15 +80,23 @@
                 opacity: 0;
             }
         }
+        @keyframes sway {
+            0%, 100% {
+                transform: rotate(-5deg);
+            }
+            50% {
+                transform: rotate(5deg);
+            }
+        }
     </style>
 </head>
 <body>
     <div class="hearts">
-        <span>❤️</span>
-        <span>❤️</span>
-        <span>❤️</span>
-        <span>❤️</span>
-        <span>❤️</span>
+        <span>M❤️I</span>
+        <span>M❤️I</span>
+        <span>M❤️I</span>
+        <span>M❤️I</span>
+        <span>M❤️I</span>
     </div>
     <div class="flowers">
         <span>🌼</span>
@@ -113,6 +131,9 @@
         <p>
             Gracias por ser tú, por amarme y por estar a mi lado. Eres mi todo, y siempre lo serás. Te amo con todo mi corazón. 💛🌼
         </p>
+        <div class="bouquet">
+            <img src="https://www.transparentpng.com/thumb/tulip/yellow-tulip-png-image-0.png" alt="Ramo de tulipanes">
+        </div>
     </div>
     <script>
         // Función para crear corazones y flores dinámicamente
@@ -122,7 +143,7 @@
 
             for (let i = 0; i < 20; i++) {
                 const heart = document.createElement('span');
-                heart.innerHTML = '❤️';
+                heart.innerHTML = 'M❤️I';
                 heart.style.left = Math.random() * 100 + 'vw';
                 heart.style.animationDuration = Math.random() * 5 + 5 + 's';
                 heartsContainer.appendChild(heart);
